@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Bubblegum Sans", sans-serif;
+  background-color: #fcbe9a;
+}
+
+body {
+}
+#MainBar {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    margin: 15px;
+    color: #ec4a4a;
+  }
+  p {
+    margin: 10px;
+    color: #c05a5a;
+  }
+}
+#TaskBar {
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 10px dashed #f08787;
+  flex-wrap: wrap;
+}
+#container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to right, #f8fab4, #fee2ad, #ffc7a7, #f08787);
+  display: flex;
+  flex-wrap: wrap;
+}
+.TaskCard {
+  color: #9e2121;
+  width: 200px;
+  height: 200px;
+  background: #fcbe9a;
+  display: flex;
+  justify-content: space-around;
+  align-self: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 5px groove #f08787;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 25px;
+  box-shadow: 7px 13px 26px #c86969;
+}
+.TaskCard:hover {
+  transform: scale(0.95);
+  transition: 0.3s;
+}
