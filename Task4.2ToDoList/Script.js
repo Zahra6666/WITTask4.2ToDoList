@@ -14,28 +14,38 @@ Addbtn.addEventListener("click", function () {
     TaskCard.classList.add("TaskCard");
     console.log("Task Added");
 
+    // Top div
+    const TopCard = document.createElement("div");
+    TopCard.classList.add("TopCard");
+    TaskCard.appendChild(TopCard);
+
     // Add title
     const TaskTitle = document.createElement("h3");
     TaskTitle.textContent = Title.value;
-    TaskCard.appendChild(TaskTitle);
-    TaskTitle.classList.add("CardContent");
+    TopCard.appendChild(TaskTitle);
+    TaskTitle.classList.add("Title");
 
     // Add date
     const TaskDate = document.createElement("small");
     TaskDate.textContent = Date.value;
-    TaskCard.appendChild(TaskDate);
-    TaskDate.classList.add("CardTop", "Date");
+    TopCard.appendChild(TaskDate);
+    TaskDate.classList.add("Date");
 
     // Add Description
     const TaskDescription = document.createElement("p");
     TaskDescription.textContent = Desc.value;
     TaskCard.appendChild(TaskDescription);
-    TaskDescription.classList.add("CardContent");
+    TaskDescription.classList.add("TaskDescription");
+
+    // buttons div
+    const ButtonsContain = document.createElement("div");
+    ButtonsContain.classList.add("ButtonsContain");
+    TaskCard.appendChild(ButtonsContain);
 
     // complete button
     const Completebtn = document.createElement("button");
     Completebtn.textContent = "Incomplete";
-    TaskCard.appendChild(Completebtn);
+    ButtonsContain.appendChild(Completebtn);
     Completebtn.addEventListener("click", function () {
       TaskCard.classList.toggle("completed");
       if (TaskCard.classList.contains("completed")) {
@@ -46,12 +56,12 @@ Addbtn.addEventListener("click", function () {
         console.log("Task incomplete");
       }
     });
-    Completebtn.classList.add("CardTop", "Complete");
+    Completebtn.classList.add("Complete");
 
     // Edit button
     const Editbtn = document.createElement("button");
     Editbtn.textContent = "Edit";
-    TaskCard.appendChild(Editbtn);
+    ButtonsContain.appendChild(Editbtn);
     Editbtn.addEventListener("click", function () {
       const NewTitle = prompt("Enter a new Title");
       if (NewTitle !== null) {
@@ -63,17 +73,17 @@ Addbtn.addEventListener("click", function () {
       }
       console.log("Task edited");
     });
-    Editbtn.classList.add("CardButtons");
+    Editbtn.classList.add("Edit");
 
     // Delete Button
     const deletbtn = document.createElement("button");
     deletbtn.textContent = "Delete";
-    TaskCard.appendChild(deletbtn);
+    ButtonsContain.appendChild(deletbtn);
     deletbtn.addEventListener("click", function () {
       TaskCard.remove();
       console.log("Task deleted");
     });
-    deletbtn.classList.add("CardButtons");
+    deletbtn.classList.add("Delete");
 
     // Reset Input
     Title.value = "";
