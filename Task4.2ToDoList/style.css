@@ -37,8 +37,9 @@ body {
 }
 .TaskCard {
   color: #9e2121;
-  width: 200px;
-  height: 200px;
+  width: 25%;
+  height: 225px;
+  box-sizing: border-box;
   background: #fcbe9a;
   display: flex;
   justify-content: space-around;
@@ -50,8 +51,40 @@ body {
   margin: 20px;
   border-radius: 25px;
   box-shadow: 7px 13px 26px #c86969;
+  gap: 20px;
+  flex-shrink: 0;
 }
 .TaskCard:hover {
   transform: scale(0.95);
   transition: 0.3s;
+}
+.TopCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  word-break: break-all;
+}
+.Title {
+}
+.Date {
+}
+.TaskDescription {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  word-break: break-all;
+  overflow-y: auto;
+}
+.ButtonsContain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.Complete {
+}
+.Edit {
+}
+.Delete {
 }
